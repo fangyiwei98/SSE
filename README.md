@@ -28,7 +28,7 @@ Domain Generalization (DG) for remote sensing image (RSI) segmentation is a chal
 
 ### t-SNE visualization of feature representations on LoveDA dataset.
 
-<img src="images/tsne" alt="图片描述" width="900">
+<img src="images/tsne.png" alt="图片描述" width="900">
 
 
 
