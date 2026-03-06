@@ -18,17 +18,17 @@ Domain Generalization (DG) for remote sensing image (RSI) segmentation is a chal
 
 ## Method Overview💡
 
-<img src="assets/network.png" alt="图片描述" width="900">
+<img src="images/network.png" alt="图片描述" width="900">
 
 
 
 ## Visualization👀
 ### Ablation visualization on the ISPRS and LoveDA datasets. 
-<img src="assets/vis.png" alt="图片描述" width="900">
+<img src="images/vis.png" alt="图片描述" width="900">
 
 ### t-SNE visualization of feature representations on LoveDA dataset.
 
-<img src="assets/tsne" alt="图片描述" width="900">
+<img src="images/tsne" alt="图片描述" width="900">
 
 
 
