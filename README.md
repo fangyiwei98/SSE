@@ -1,12 +1,12 @@
-# Submission to TGRS 2026：Boosting Domain Generalization in Remote Sensing Image Segmentation by Large-scale Style Simulation and Multi-scale Model Fine-Tuning
+# 🧠 Submission to TGRS 2026：Boosting Domain Generalization in Remote Sensing Image Segmentation by Large-scale Style Simulation and Multi-scale Model Fine-Tuning
 
 
-## Abstract👓
+ ## 👓Abstract 
 
 Domain Generalization (DG) for remote sensing image (RSI) segmentation is a challenging yet crucial task, as it enables models to generalize to unseen target domains without accessing target data during training. Most existing DG methods have achieved promising results through Data Manipulation (DM) and Model Optimization (MO), however, the existing methods suffer from two limitations. First of all, existing DM strategies are typically constrained by limited source-domain diversity and cannot sufficiently approximate the complex style variations in unseen scenarios. Secondly, existing MO methods cannot effectively learn domain-invariant and multi-scale representations due to insufficient model capacity. To address the above problems, a Style-guided Semantic-embedding Enhanced (SSE) framework is proposed, improving generalization through large-scale style simulation and multi-scale Vision Foundation Models (VFMs) fine-tuning. Specifically, to expand the coverage of the training data distribution, a Grid-based Fourier Style Transfer (GFST) module is proposed. It leverages Fast Fourier Transform (FFT) to extract amplitudes from a million-scale remote sensing dataset and performs patch-wise style transfer for each source image, enabling the stylized source images to yield diverse style variations while preserving structural semantics. Furthermore, to facilitate domain-invariant and scale-aware representation learning, a Semantic Embedding Fine-Tuning (SEFT) module is proposed. It embeds multi-scale semantic tokens between every two frozen layers of the VFM, enabling adaptive multi-scale representation refinement. Theoretical analysis indicates that SSE reduces the domain generalization error bound by jointly enlarging the attainable source distribution space and boosting feature discriminability. Extensive experiments show that SSE outperforms previous methods, with improvements of at least 2.2\% on the ISPRS dataset and 1.2\% on the LoveDA dataset, respectively. These results validate the effectiveness and robustness of SSE across diverse cross-domain remote sensing scenarios. 
 
 
-## Highlight✨
+## ✨Highlight
 
 - We propose a novel Style-guided Semantic-embedding Enhanced (SSE) framework, which improves domain generalization performance in RSI segmentation through large-scale style simulation and multi-scale VFM fine-tuning.
 - We propose a Grid-based Fourier Style Transfer (GFST) module to achieve diverse and representative training data. It leverages a million-scale remote sensing dataset to construct a style bank and performs patch-wise style transfer to emulate style variants.
@@ -16,28 +16,28 @@ Domain Generalization (DG) for remote sensing image (RSI) segmentation is a chal
 
 
 
-## Method Overview💡
+## 💡Method Overview
 
 <img src="images/network.png" alt="图片描述" width="900">
 
 
 
-## Visualization👀
-### Ablation visualization on the ISPRS and LoveDA datasets. 
+## 👀Visualization
+### 👀Ablation visualization on the ISPRS and LoveDA datasets. 
 <img src="images/vis.png" alt="图片描述" width="800">
 
-### t-SNE visualization of feature representations on LoveDA dataset.
+### 👀t-SNE visualization of feature representations on LoveDA dataset.
 
 <img src="images/tsne.png" alt="图片描述" width="800">
 
 
 
-## Usage🧠
+## 📦Usage
 
-### Datasets ###
+### 📦Datasets 
 All datasets including [ISPRS](https://www.isprs.org/education/benchmarks/UrbanSemLab/2d-sem-label-potsdam.aspx) dataset and [LoveDA](https://github.com/Junjue-Wang/LoveDA) dataset.
 
-### Environment Setup
+### 🛠️Environment Setup
 To set up your environment, execute the following commands:
 ```bash
 conda create -n rein -y
@@ -53,7 +53,7 @@ pip install -r requirements.txt
 pip install future tensorboard
 ```
 
-### Pretraining Weights
+### 🛠️Pretraining Weights
 * **Download:** Download pre-trained weights from [facebookresearch](https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_pretrain.pth) for testing. Place them in the project directory without changing the file name.
 * **Convert:** Convert pre-trained weights for training or evaluation.
   ```bash
@@ -65,15 +65,15 @@ pip install future tensorboard
   ```
   
 
-### Training
+### 🚀Training 
 ```
 CUDA_VISIBLE_DEVICES=1 nohup python -u tools/train.py > train.log 2>&1 &
 ```
 
 
-## Results ##
+## 📊 Results 
 
-### Results on the ISPRS dataset
+### 📊Results on the ISPRS dataset
 
 
 | Method | Domain | Surf | Bldg | Vegt | Tree | Car | Bkgd | mIoU (%) | Domain | Surf | Bldg | Vegt | Tree | Car | Bkgd | mIoU (%) |
@@ -117,7 +117,7 @@ CUDA_VISIBLE_DEVICES=1 nohup python -u tools/train.py > train.log 2>&1 &
 
 
 
-### Results on the LoveDA dataset
+### 📊Results on the LoveDA dataset
 
 
 
@@ -145,7 +145,7 @@ CUDA_VISIBLE_DEVICES=1 nohup python -u tools/train.py > train.log 2>&1 &
 
 
 <!--
-## Citation
+## 📝 Citation 
 
 If you use our dataset or code for research, please cite this paper: 
 
@@ -164,7 +164,7 @@ If you use our dataset or code for research, please cite this paper:
 -->
 
 
-## Acknowledgment
+## ⭐Acknowledgment
 Our implementation is mainly based on following repositories. Thanks for their authors.
 * [MMSegmentation](https://github.com/open-mmlab/mmsegmentation)
 * [Rein](https://github.com/w1oves/Rein)
@@ -173,6 +173,6 @@ Our implementation is mainly based on following repositories. Thanks for their a
 
 
 
-## Contact
+## 📧Contact
 
 If you encounter any problems or bugs, please don't hesitate to contact me at [yiweifang@hhu.edu.cn](mailto:yiweifang@hhu.edu.cn). 
